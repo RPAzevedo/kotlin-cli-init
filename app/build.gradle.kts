@@ -9,17 +9,20 @@ repositories {
     mavenCentral()
 }
 
+val kotestVersion = "5.3.0"
+
 dependencies {
     implementation(kotlin("stdlib"))
 
-    // Use the Kotlin test library.
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-
-    // Use the Kotlin JUnit integration.
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
+    testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
+    testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
 }
 
 application {
     // Define the main class for the application.
     mainClass.set("app.AppKt")
+}
+
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
 }
