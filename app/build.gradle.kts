@@ -10,9 +10,13 @@ repositories {
 }
 
 val kotestVersion = "5.3.0"
+val arrowVersion  = "1.0.1"
 
 dependencies {
     implementation(kotlin("stdlib"))
+
+    implementation(platform("io.arrow-kt:arrow-stack:$arrowVersion"))
+    implementation("io.arrow-kt:arrow-core")
 
     testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
     testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
