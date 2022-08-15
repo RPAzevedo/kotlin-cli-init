@@ -9,7 +9,7 @@ repositories {
     mavenCentral()
 }
 
-val kotestVersion = "5.3.0"
+val kotestVersion = "5.4.2"
 val arrowVersion  = "1.0.1"
 
 dependencies {
