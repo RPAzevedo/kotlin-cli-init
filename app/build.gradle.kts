@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.6.21"
+    kotlin("jvm") version "1.8.0"
 
     // Apply the application plugin to add support for building a CLI application in Java.
     application
@@ -9,7 +9,7 @@ repositories {
     mavenCentral()
 }
 
-val kotestVersion = "5.4.2"
+val kotestVersion = "5.5.4"
 val arrowVersion  = "1.0.1"
 
 dependencies {
