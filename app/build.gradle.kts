@@ -9,8 +9,8 @@ repositories {
     mavenCentral()
 }
 
-val kotestVersion = "5.8.0"
-val arrowVersion  = "1.2.0"
+val kotestVersion = "5.8.1"
+val arrowVersion  = "1.2.1"
 
 dependencies {
     implementation(kotlin("stdlib"))
