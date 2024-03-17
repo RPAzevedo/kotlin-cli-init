@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.8.0"
+    kotlin("jvm") version "1.9.23"
 
     // Apply the application plugin to add support for building a CLI application in Java.
     application
