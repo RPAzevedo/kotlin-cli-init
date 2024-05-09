@@ -37,3 +37,8 @@ application {
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }
+
+tasks.named<JavaExec>("run").configure {
+    standardInput = System.`in`
+    standardOutput = System.`out`
+}
