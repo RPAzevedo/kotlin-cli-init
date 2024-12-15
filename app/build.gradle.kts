@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.9.23"
-    id("com.google.devtools.ksp") version "1.9.23-1.0.20"
+    kotlin("jvm") version "2.1.0"
+    kotlin("plugin.serialization") version "2.1.0"
 
     // Apply the application plugin to add support for building a CLI application in Java.
     application
@@ -10,17 +10,14 @@ repositories {
     mavenCentral()
 }
 
-val kotestVersion = "5.8.1"
+val kotestVersion = "5.9.1"
 val arrowVersion  = "1.2.4"
-val moshiVersion  = "1.15.1"
+val serializationVersion  = "1.7.3"
 
 dependencies {
     implementation(kotlin("stdlib"))
 
-    implementation("com.squareup.moshi:moshi:$moshiVersion")
-    implementation("com.squareup.moshi:moshi-kotlin:$moshiVersion")
-    implementation("com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion")
-    ksp("com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
 
     implementation(platform("io.arrow-kt:arrow-stack:$arrowVersion"))
     implementation("io.arrow-kt:arrow-core")
